@@ -1,0 +1,18 @@
+<md-toolbar class="md-hue-2">
+	<div class="md-toolbar-tools">
+		<a ui-sref="home" title="Books - Home">
+			<h2>Books</h2>
+		</a>
+		<span flex></span>
+			<input ng-model="vm.txtSearch" id="input-search" class="md-input-search" placeholder="pesquise aqui os livros..." ng-keyup="$event.keyCode == 13 && vm.goSearch()">
+		<span flex></span>
+		<md-button class="md-icon-button" ng-click="vm.goSearch()">
+			<i class="material-icons">search</i>
+			<md-tooltip md-direction="left">Pesquisar</md-tooltip>
+		</md-button>
+		<md-button ui-sref="favorites" class="md-icon-button">
+			<i class="material-icons">favorite</i>
+			<md-tooltip md-direction="left">Meus Favoritos</md-tooltip>
+		</md-button>
+	</div>
+</md-toolbar>

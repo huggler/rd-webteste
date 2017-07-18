@@ -1,0 +1,30 @@
+<md-card ng-repeat="item in card.items">
+  <md-card-title>
+    <md-card-title-media>
+      <div class="md-media-sm card-media">
+        <a href="javascript:void(0)" ng-click="card.openBookDetail($event, item)"><img ng-src="{{ item.volumeInfo.imageLinks.thumbnail }}" alt="{{ item.volumeInfo.title }}" /></a>
+      </div>
+    </md-card-title-media>
+    <md-card-title-text>
+      <span class="md-headline">{{ item.volumeInfo.title }}</span>
+      <span class="md-subhead" ng-bind-html="item.volumeInfo.description | highlight:card.searchTerm"></span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-divider></md-divider>
+  <md-card-actions layout="row" layout-align="end center">
+
+    <md-button class="md-icon-button" ng-click="card.openBookDetail($event, item)">
+      <i class="material-icons">launch</i>
+      <md-tooltip md-direction="top">Detalhes</md-tooltip>
+    </md-button>
+
+    <md-button class="md-icon-button" ng-click="card.addToFavorites(item)" ng-show="!card.router">
+      <i class="material-icons">favorite</i>
+      <md-tooltip md-direction="top">Adicionar a Favoritos</md-tooltip>
+    </md-button>
+    <md-button class="md-icon-button" ng-click="card.removeToFavorites($event, item)" ng-show="card.router">
+      <i class="material-icons"><i class="material-icons">delete</i></i>
+      <md-tooltip md-direction="top">Remover dos Favoritos</md-tooltip>
+    </md-button>
+  </md-card-actions>
+</md-card>

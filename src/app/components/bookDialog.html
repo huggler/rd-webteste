@@ -1,0 +1,30 @@
+<md-dialog aria-label="Book Dialog">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{dialog.book.volumeInfo.title}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="dialog.cancel()">
+          <i class="material-icons">close</i>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <img ng-src="{{ dialog.book.volumeInfo.imageLinks.thumbnail }}" />
+        <p>
+          {{dialog.book.volumeInfo.description}}
+        </p>
+
+        <ul>
+          <li>Etag: {{dialog.book.etag}}</li>
+          <li>Id: {{dialog.book.id}}</li>
+          <li>Language: {{dialog.book.volumeInfo.language}}</li>
+          <li>Rating: {{dialog.book.volumeInfo.ratingsCount}}</li>
+        </ul>
+
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

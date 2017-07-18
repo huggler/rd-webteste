@@ -1,0 +1,139 @@
+/**
+ *  Do not remove the comment below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto:400,700,700italic,400italic);
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #ededed;
+}
+
+/* highlight tag */
+kbd {
+  background: gray;
+  color: #fff;
+}
+
+
+md-content, md-content.md-default-theme {
+    background: transparent;
+}
+.md-errors-spacer {
+  display: none;
+}
+.md-input-search input {
+  color: rgba(255,255,255,0.87);
+}
+
+/* md-card override */
+md-card {
+  border-radius: 0;
+}
+md-card md-card-title md-card-title-media {
+  margin: 0 16px 0 0;
+}
+md-card md-card-title md-card-title-media .md-media-sm {
+  height: auto;
+}
+
+/* md-toast override */
+md-toast.md-default-theme .md-toast-content, md-toast .md-toast-content {
+  background: rgb(40,53,147);
+}
+.md-top.md-center,
+.md-bottom.md-center {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.md-input-search {
+  display: flex;
+  flex: 1;
+  outline: none;
+  background: transparent;
+  border: 3px solid rgba(255,255,255,0.87);
+  padding: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.87);
+  border-radius: 20px;
+  transition-duration: .3s;
+  &:focus {
+    background: rgba(255,255,255,0.87);
+    color: rgb(40,53,147);
+    &::-webkit-input-placeholder {
+      color:rgb(40,53,147);
+    }
+  }
+  &::-webkit-input-placeholder {
+    color: #fff
+  }
+}
+
+/* paginacaozinha */
+.md-paginate {
+  padding: 8px 0
+}
+.md-paginate-button {
+  outline: none;
+  border: none;
+  font-size: 11px;
+  padding: 8px;
+  margin: 1px;
+  border-radius: 10px;
+}
+.md-paginate-button.active,.md-paginate-button:hover {
+  background: rgb(40,53,147);
+  color: #fff;
+}
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

@@ -1,0 +1,18 @@
+<div flex layout-fill>
+  
+  <!-- loading -->
+  <div layout-fill layout-align="center center" layout="column" ng-show="main.searching">
+      <md-progress-circular md-mode="indeterminate" md-diameter="60"></md-progress-circular>
+  </div>
+
+  <!-- paginacao rapidinha -->
+  <div flex layout="row" ng-show="!main.searching && main.items.length > 0" layout-align="center center" class="md-paginate">
+    <button class="md-paginate-button" ng-class="{'active': $index == main.startIndex}" ng-click="main.search($index)" ng-repeat="n in [].constructor(main.totalPages) track by $index">{{$index + 1}}</button>
+  </div>
+
+  <!-- items -->
+  <section ng-show="main.items.length > 0 && !main.searching" class="list-events">
+    <md-subheader class="md-primary">Pesquisando por: {{main.searchTerm}} - {{main.totalItems}} Resultados encontrados</md-subheader>
+    <div card-book items="main.items" search-term="{{main.searchTerm}}"></div>
+  </section>
+</div>
